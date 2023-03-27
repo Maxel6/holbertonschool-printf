@@ -1,2 +1,2 @@
 # holbertonschool-printf
-# By Simon Descombes and Axel Malka
+By Simon Descombes and Axel Malka
