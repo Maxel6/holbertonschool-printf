@@ -4,6 +4,6 @@ int main(void)
 {
         char a = 'W';
 
-        _printf("toto %c tata", a);
+        _printf("toto %% tata");
         return (0);
 }
