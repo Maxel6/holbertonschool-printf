@@ -2,11 +2,10 @@
 int(*check_type(char c, va_list list))
 {
 	int i = 0;
-	int p_flag = 0;
-	char percent = '%';
 	check_t type[] = {
 		{'s', print_s},
 		{'c', print_c},
+		{'%', print_percent},
 		{0, 0}
 	};
 
@@ -15,14 +14,14 @@ int(*check_type(char c, va_list list))
 		if (c == type[i].arg)
 		{
 			type[i].func(list);
-			p_flag = 1;
+/*			p_flag = 1;
 			break;
-		}
+*/		}
 		i++;
 	}
-	if (!p_flag)
-	{
-		write(STDOUT_FILENO, &percent, sizeof(char));
-	}
-	return 0;
+/**	if (!p_flag)
+*	{
+*		write(STDOUT_FILENO, &percent, sizeof(char));
+*	}
+*/	return 0;
 }
