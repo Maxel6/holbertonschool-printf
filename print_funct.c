@@ -38,7 +38,7 @@ int print_s(va_list s)
 
 	if (str == NULL)
 	{
-		return (write(STDOUT_FILEN0, "(null)", 6 * sizeof(char)));
+		return ((write(STDOUT_FILENO, "(null)", 6 * sizeof(char))));
 	}
 	else
 	{
