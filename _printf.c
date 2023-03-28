@@ -9,6 +9,8 @@
  */
 int _printf(const char *format, ...)
 {
+	if (format == NULL)
+		return (-1);
 	va_list arg;
 	const char *p = &format[0];
 	int count = 0;
