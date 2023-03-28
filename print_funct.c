@@ -14,10 +14,3 @@ int print_s(va_list s)
 
 	return (write(STDOUT_FILENO, str, sizeof(char) * len));
 }
-
-int print_percent(void)
-{
-	int percent = '%';
-
-	return (write(STDOUT_FILENO, &percent, sizeof(char)));
-}
