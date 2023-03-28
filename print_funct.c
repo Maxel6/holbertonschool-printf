@@ -36,5 +36,12 @@ int print_s(va_list s)
 	char *str = va_arg(s, char*);
 	int len =  _strlen(str);
 
-	return (write(STDOUT_FILENO, str, sizeof(char) * len));
+	if (str == NULL)
+	{
+		return (write(STDOUT_FILEN0, "(null)", 6 * sizeof(char)));
+	}
+	else
+	{
+		return (write(STDOUT_FILENO, str, sizeof(char) * len));
+	}
 }
