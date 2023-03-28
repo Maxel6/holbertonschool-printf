@@ -1,7 +1,9 @@
+#include "main.h"
 int main(void)
 {
 	char c = 'W';
 	char *str = "ui";
+
 	_printf("Hello World");
 	_printf("Hello World\n");
 	_printf("char c : %c\n", c);
