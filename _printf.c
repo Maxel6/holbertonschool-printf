@@ -4,6 +4,7 @@ int _printf(const char *format, ...)
 {
 	va_list arg;
 	const char *p = &format[0];
+	int count = 0;
 
 	va_start(arg, format);
 
@@ -11,16 +12,16 @@ int _printf(const char *format, ...)
 	{
 		if (*p != '%')
 		{
-			write(STDOUT_FILENO, p, sizeof(char));
+			count += write(STDOUT_FILENO, p, sizeof(char));
 			p++;
 		}
 		else
 		{
 			p++;
-			check_type(*p, arg);
+			count += check_type(*p, arg);
 			p++;
 		}
 	}
-	return (0);
+	return (count);
 }
 

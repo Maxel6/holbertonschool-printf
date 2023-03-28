@@ -1,7 +1,9 @@
 #include "main.h"
-int(*check_type(char c, va_list list))
+int check_type(char c, va_list list)
 {
 	int i = 0;
+	int a = 0;
+
 	check_t type[] = {
 		{'s', print_s},
 		{'c', print_c},
@@ -13,7 +15,7 @@ int(*check_type(char c, va_list list))
 	{
 		if (c == type[i].arg)
 		{
-			type[i].func(list);
+			a += type[i].func(list);
 /*			p_flag = 1;
 			break;
 */		}
@@ -23,5 +25,5 @@ int(*check_type(char c, va_list list))
 *	{
 *		write(STDOUT_FILENO, &percent, sizeof(char));
 *	}
-*/	return 0;
+*/	return (a);
 }
