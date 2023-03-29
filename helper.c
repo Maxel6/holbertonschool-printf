@@ -38,10 +38,7 @@ int count_digit(long int a)
 	int c = 0;
 
 	if(a < 0)
-	{
 		a = -a;
-		c++;
-	}
 	do
 	{
 		c++;

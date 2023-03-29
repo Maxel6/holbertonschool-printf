@@ -49,6 +49,8 @@ int print_d(va_list d)
   char *digits;
   int num_digits = 0;
   digits = malloc(count_digit(num) * sizeof(char));
+  if (digit == NULL)
+	  return (-1);
 
   if (num < 0)
   {
