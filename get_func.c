@@ -17,10 +17,9 @@ int check_type(char c, va_list list)
 	check_t type[] = {
 		{'s', print_s},
 		{'c', print_c},
-		{'d', print_d},
-		{'i', print_d},
 		{'%', print_percent},
-		{0, 0}};
+		{0, 0}
+	};
 
 	while (type[i].arg != 0)
 	{
@@ -33,8 +32,10 @@ int check_type(char c, va_list list)
 	}
 	if (p_flag != 1)
 	{
-		printf("toto");
-		write(STDOUT_FILENO, &percent, sizeof(char));
-		write(STDOUT_FILENO, &c, sizeof(char));
+		a += write(STDOUT_FILENO, &percent, sizeof(char));
+		a += write(STDOUT_FILENO, &c, sizeof(char));
 	}
+	return (a);
+}
+
 
