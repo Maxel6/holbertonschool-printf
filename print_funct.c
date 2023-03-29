@@ -45,32 +45,33 @@ int print_s(va_list s)
 
 int print_d(va_list d)
 {
-  int num = va_arg(d, int);
-  char *digits;
-  int num_digits = 0;
-  digits = malloc(count_digit(num) * sizeof(char));
-  if (digits == NULL)
-	  return (-1);
+	long int num = va_arg(d, int);
+	char *digits;
+	int num_digits = 0;
 
-  if (num < 0)
-  {
-    _putchar('-');
-    num = -num;
-  }
+	digits = malloc(count_digit(num) * sizeof(char));
+	if (digits == NULL)
+		return (-1);
 
-  if (num == 0)
-  {
-    _putchar('0');
-    return (1);
-  }
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
 
-  while (num > 0)
-  {
-    digits[num_digits] = num % 10;
-    num /= 10;
-    num_digits++;
-  }
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
-  return (reverse(num_digits, digits));
+	while (num > 0)
+	{
+		digits[num_digits] = num % 10;
+		num /= 10;
+		num_digits++;
+	}
+
+	return (reverse(num_digits, digits));
 }
 
