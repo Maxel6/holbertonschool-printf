@@ -37,12 +37,15 @@ int print_s(va_list s)
 	int len = 0;
 
 	if (str == NULL)
-		str ="(null)";
-
+		str = "(null)";
 	len =  _strlen(str);
 	return (write(STDOUT_FILENO, str, sizeof(char) * len));
 }
-
+/**
+ * print_d - print an int
+ *@d: the integer to be printed
+ *Return: On success, the number of characters written is returned.
+ */
 int print_d(va_list d)
 {
 	long int num = va_arg(d, int);
@@ -52,26 +55,22 @@ int print_d(va_list d)
 	digits = malloc(count_digit(num) * sizeof(char));
 	if (digits == NULL)
 		return (-1);
-
 	if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
 	}
-
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-
 	while (num > 0)
 	{
 		digits[num_digits] = num % 10;
 		num /= 10;
 		num_digits++;
 	}
-
 	return (reverse(num_digits, digits));
 }
 

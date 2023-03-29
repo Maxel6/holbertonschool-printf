@@ -9,9 +9,10 @@
  */
 int main(void)
 {
-	int a = 20;
-	_printf("age = %d \n", a);
-	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	int max = 0;
+	int min = INT_MIN;
+	_printf("max = %d\n", max);
+	_printf("min = %d\n", min);
 	return (0);
 
 }
