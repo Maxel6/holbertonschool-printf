@@ -49,7 +49,7 @@ int print_d(va_list d)
   char *digits;
   int num_digits = 0;
   digits = malloc(count_digit(num) * sizeof(char));
-  if (digit == NULL)
+  if (digits == NULL)
 	  return (-1);
 
   if (num < 0)
@@ -61,7 +61,7 @@ int print_d(va_list d)
   if (num == 0)
   {
     _putchar('0');
-    return 1;
+    return (1);
   }
 
   while (num > 0)
