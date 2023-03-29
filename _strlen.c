@@ -17,3 +17,4 @@ int _strlen(char *count)
 	}
 	return (i);
 }
+

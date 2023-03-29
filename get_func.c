@@ -29,3 +29,4 @@ int check_type(char c, va_list list)
 	}
 	return (a);
 }
+
