@@ -17,6 +17,8 @@ int check_type(char c, va_list list)
 	check_t type[] = {
 		{'s', print_s},
 		{'c', print_c},
+		{'i', print_d},
+		{'d', print_d},
 		{'%', print_percent},
 		{0, 0}
 	};

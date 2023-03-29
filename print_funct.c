@@ -34,15 +34,41 @@ int print_c(va_list c)
 int print_s(va_list s)
 {
 	char *str = va_arg(s, char*);
-	int len =  _strlen(str);
+	int len = 0;
 
 	if (str == NULL)
-	{
-		return ((write(STDOUT_FILENO, "(null)", 6 * sizeof(char))));
-	}
-	else
-	{
-		return (write(STDOUT_FILENO, str, sizeof(char) * len));
-	}
+		str ="(null)";
+
+	len =  _strlen(str);
+	return (write(STDOUT_FILENO, str, sizeof(char) * len));
+}
+
+int print_d(va_list d)
+{
+  int num = va_arg(d, int);
+  char *digits;
+  int num_digits = 0;
+  digits = malloc(count_digit(num) * sizeof(char));
+
+  if (num < 0)
+  {
+    _putchar('-');
+    num = -num;
+  }
+
+  if (num == 0)
+  {
+    _putchar('0');
+    return 1;
+  }
+
+  while (num > 0)
+  {
+    digits[num_digits] = num % 10;
+    num /= 10;
+    num_digits++;
+  }
+
+  return (reverse(num_digits, digits));
 }
 
