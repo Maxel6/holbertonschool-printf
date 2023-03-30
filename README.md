@@ -1,6 +1,6 @@
 # _printf
 
-_printf un projet réalisé par deux développeurs pour reproduire le fonctionnement de la commande printf en C. Ce projet a été réalisé dans un but éducatif pour comprendre et maîtriser les concepts de la programmation en langage C.
+_printf un projet réalisé pour reproduire le fonctionnement de la commande printf en C. Ce projet a été réalisé dans dans le cadre d'un projet d'étude chez Holberton School pour comprendre et maîtriser les concepts de la programmation en langage C.
 
 ## Table des matières
 
@@ -9,7 +9,6 @@ _printf un projet réalisé par deux développeurs pour reproduire le fonctionne
 -   [Installation](#installation)
 -   [Utilisation](#utilisation)
 -   [Contributeurs](#contributeurs)
--   [License](#license)
 
 ## Présentation du projet
 
@@ -27,7 +26,6 @@ _printf prend en charge les spécificateurs de format suivants :
 -   %c : caractère
 -   %s : chaîne de caractères
 -   %d ou %i : entier signé en base 10
--   %% : pour afficher un caractère '%'
 
 ## Installation
 
