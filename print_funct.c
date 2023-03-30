@@ -51,6 +51,7 @@ int print_d(va_list d)
 	long int num = va_arg(d, int);
 	char *digits;
 	int num_digits = 0;
+	int negatif = 0;
 
 	digits = malloc(count_digit(num) * sizeof(char));
 	if (digits == NULL)
@@ -59,6 +60,7 @@ int print_d(va_list d)
 	{
 		_putchar('-');
 		num = -num;
+		negatif = 1;
 	}
 	if (num == 0)
 	{
@@ -71,6 +73,6 @@ int print_d(va_list d)
 		num /= 10;
 		num_digits++;
 	}
-	return (reverse(num_digits, digits));
+	return (reverse(num_digits, digits) + negatif);
 }
 
