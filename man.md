@@ -14,9 +14,7 @@
 
 The following conversion specifications are supported:
 
-Conversion
-
-Output format
+Conversion - Output format
 
 `%c` - Single character
 
