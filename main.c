@@ -8,11 +8,10 @@
  * Return: Always 0
  */
 int main(void)
-{
-	int max = 0;
-	int min = INT_MIN;
-	_printf("max = %d\n", max);
-	_printf("min = %d\n", min);
+{	
+	int a = -1024;
+	_printf("max = %i\n",a);
+	printf("max = %i\n",a);
 	return (0);
 
 }
