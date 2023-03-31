@@ -13,8 +13,8 @@ _printf un projet réalisé pour reproduire le fonctionnement de la commande pri
 ## Présentation du projet
 
 Le projet _printf se base sur la fonction printf de la bibliothèque standard C. Il permet de formater et d'afficher des données à l'écran. Le code source est composé des fichiers suivants :
-
 -   main.h : Le fichier d'en-tête contenant les prototypes des fonctions et les structures utilisées.
+-   _printf.c : Contient la fonction principale _printf qui implémente la logique de traitement des chaînes de format.
 -   get_func.c : Contient la fonction de récupération de la fonction d'affichage correspondante au format spécifié.
 -   helper.c : Contient des fonctions d'aide pour le traitement des chaînes et des nombres.
 -   print_funct.c : Contient les fonctions d'affichage pour chaque format pris en charge.
@@ -35,21 +35,23 @@ _printf prend en charge les spécificateurs de format suivants :
 
 2.  Compilez les fichiers sources avec la commande suivante :
 
-`gcc -Wall -Werror -Wextra -pedantic *.c -o _printf` 
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o _printf`
 
 ## Utilisation
 
 Incluez le fichier d'en-tête `main.h` dans votre projet et utilisez la fonction `_printf` de la même manière que vous utiliseriez la fonction `printf` de la bibliothèque standard C.
 
 Voici un exemple d'utilisation de _printf :
-``#include "main.h"``
-``int main(void)``
-``{``
- ``_printf("Bonjour, %s !\n", "Holberton");``
- ``_printf("J'ai %d pommes et %i poires.\n", 5, 7);``
- ``_printf("Voici un caractère : %c\n", 'A');``
- ``return (0);``
- ``}``
+```
+#include "main.h
+int main(void)
+{
+ _printf("Bonjour, %s !\n", "Holberton");
+ _printf("J'ai %d pommes et %i poires.\n", 5, 7);
+ _printf("Voici un caractère : %c\n", 'A');
+ return (0);
+}
+```
 
 ## Contributeurs
 
