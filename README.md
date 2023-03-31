@@ -71,5 +71,5 @@ Voici un caractère : A
 
 ## Contributeurs
 
-Ce projet a été réalisé par [Axel Malka](https://github.com/https://github.com/Maxel6) et [Simon Descombes](https://github.com/SimonDesc).
+Ce projet a été réalisé par [Axel Malka](https://github.com/Maxel6) et [Simon Descombes](https://github.com/SimonDesc).
 
