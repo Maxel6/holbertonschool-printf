@@ -61,13 +61,15 @@ int main(void) {
  _printf("I have %d apples and %i pears.\n", 5, 7);
  _printf("Here's a character: %c\n", 'A');
  return (0);
-}``` 
+}
+``` 
 
-
-```simon@ubuntu:~/c/printf$ ./_printf
+```
+simon@ubuntu:~/c/printf$ ./_printf
 Hello, Holberton!
 I have 5 apples and 7 pears.
-Here's a character: A```
+Here's a character: A
+```
 
 ## Contributors
 
