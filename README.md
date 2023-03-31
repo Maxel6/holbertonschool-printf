@@ -5,6 +5,7 @@ _printf un projet réalisé pour reproduire le fonctionnement de la commande pri
 ## Table des matières
 
 -   [Présentation du projet](#pr%C3%A9sentation-du-projet)
+-   [Requirements](#Requirements)
 -   [Fonctionnalités](#fonctionnalit%C3%A9s)
 -   [Installation](#installation)
 -   [Utilisation](#utilisation)
@@ -19,6 +20,13 @@ Le projet _printf se base sur la fonction printf de la bibliothèque standard C.
 -   helper.c : Contient des fonctions d'aide pour le traitement des chaînes et des nombres.
 -   print_funct.c : Contient les fonctions d'affichage pour chaque format pris en charge.
 
+![Flowchart](https://lh3.googleusercontent.com/drive-viewer/AAOQEORVZF6aMsCC35B3IhNUvvG_c6ICdS8Ep73fYul73agZ7JlkHHOt5mlq_pGKxvNYP07rmdxdSAIldeQEV_tP3di43pHmTQ=w1920-h878)
+
+## Requirements
+-	Ubuntu 20.04
+-	GCC
+-	Git
+
 ## Fonctionnalités
 
 _printf prend en charge les spécificateurs de format suivants :
@@ -26,6 +34,8 @@ _printf prend en charge les spécificateurs de format suivants :
 -   %c : caractère
 -   %s : chaîne de caractères
 -   %d ou %i : entier signé en base 10
+
+Plus d'information avec la commande : `man _printf`
 
 ## Installation
 
@@ -51,6 +61,12 @@ int main(void)
  _printf("Voici un caractère : %c\n", 'A');
  return (0);
 }
+```
+```
+simon@ubuntu:~/c/printf$ ./_printf
+Bonjour Holberton
+J'ai 5 pommes et 7 poires.
+Voici un caractère : A
 ```
 
 ## Contributeurs
