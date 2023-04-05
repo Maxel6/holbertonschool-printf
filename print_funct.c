@@ -75,4 +75,3 @@ int print_d(va_list d)
 	}
 	return (reverse(num_digits, digits) + negatif);
 }
-

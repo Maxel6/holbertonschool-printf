@@ -57,6 +57,5 @@ int reverse(int num_digits, char *digits)
 
 	for (i = num_digits - 1; i >= 0; i--, count++)
 		_putchar(digits[i] + '0');
-	printf("count = %d", count);
 	return (count);
 }
